@@ -10,11 +10,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
+          elevation: 0,
           title: const Text("Hain"),
         ),
-        body: const Homepage(),
+        body: Homepage(),
       ),
     );
   }
