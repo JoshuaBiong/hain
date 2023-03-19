@@ -35,6 +35,7 @@ class CategoryPage extends StatelessWidget {
               child: const Text("BAck")),
         ],
       ),
+      floatingActionButton: FloatingActionButton(onPressed: () {}),
     );
   }
 }

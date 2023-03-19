@@ -11,11 +11,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Homepage(),
+        backgroundColor: const Color.fromARGB(255, 236, 235, 153),
+        body: const Homepage(),
         // floatingActionButton: FloatingActionButton(onPressed: (, child: Text("jfkdj"),),),
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: () {},
+          label: const Text("       +       "),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }

@@ -6,8 +6,9 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
+    return ListView(
+      // physics: AlwaysScrollableScrollPhysics(),
+      children: const [
         CategoryTile(categoryName: "HOME", date: "May 12, 2023", amount: 10000),
         CategoryTile(
             categoryName: "SCHOOL", date: "May 13, 2023", amount: 7000),
