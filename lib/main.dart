@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hain/util/dialog.dart';
 
 import 'homapge.dart';
 
@@ -11,16 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void addCat() {
-      AlertDialog(
-        content: Container(
-          height: 100,
-          width: 100,
-          decoration: const BoxDecoration(color: Colors.blueAccent),
-        ),
-      );
-    }
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -30,7 +21,17 @@ class MyApp extends StatelessWidget {
         floatingActionButton: FloatingActionButton.extended(
           elevation: 0,
           backgroundColor: const Color.fromARGB(255, 248, 200, 28),
-          onPressed: () {},
+          onPressed: () {
+            showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: Text("Success"),
+                    content: Text("Saved successfully"),
+                  );
+                });
+            print("clicked");
+          },
           label: const Text("       +       "),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -38,3 +39,31 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// class DialogExample extends StatelessWidget {
+//   const DialogExample({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return TextButton(
+//       onPressed: () => showDialog<String>(
+//         context: context,
+//         builder: (BuildContext context) => AlertDialog(
+//           title: const Text('AlertDialog Title'),
+//           content: const Text('AlertDialog description'),
+//           actions: <Widget>[
+//             TextButton(
+//               onPressed: () => Navigator.pop(context, 'Cancel'),
+//               child: const Text('Cancel'),
+//             ),
+//             TextButton(
+//               onPressed: () => Navigator.pop(context, 'OK'),
+//               child: const Text('OK'),
+//             ),
+//           ],
+//         ),
+//       ),
+//       child: const Text('Show Dialog'),
+//     );
+//   }
+// }
