@@ -8,21 +8,10 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
+        CategoryTile(categoryName: "HOME", date: "May 12, 2023", amount: 10000),
         CategoryTile(
-          categoryName: "HOME",
-          date: "May 12, 2023",
-          amount: 10000,
-        ),
-        CategoryTile(
-          categoryName: "SCHOOL",
-          date: "May 19, 2023",
-          amount: 4000,
-        ),
-        CategoryTile(
-          categoryName: "CAR",
-          date: "May 21, 2023",
-          amount: 12000,
-        ),
+            categoryName: "SCHOOL", date: "May 13, 2023", amount: 7000),
+        CategoryTile(categoryName: "CAR", date: "May 14, 2023", amount: 12030),
       ],
     );
   }

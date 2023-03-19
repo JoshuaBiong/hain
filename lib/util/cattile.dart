@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hain/pages/category_page/categorypage.dart';
+import 'package:page_transition/page_transition.dart';
 
 class CategoryTile extends StatelessWidget {
   final String categoryName;
@@ -19,9 +20,9 @@ class CategoryTile extends StatelessWidget {
       child: GestureDetector(
         onTap: () => Navigator.push(
           context,
-          MaterialPageRoute<void>(
-            builder: (BuildContext context) =>
-                CategoryPage(catName: categoryName, amount: amount),
+          PageTransition(
+            type: PageTransitionType.rightToLeft,
+            child: CategoryPage(catName: categoryName, amount: amount),
           ),
         ),
         child: Container(
