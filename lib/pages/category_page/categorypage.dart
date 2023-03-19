@@ -35,7 +35,21 @@ class CategoryPage extends StatelessWidget {
               child: const Text("BAck")),
         ],
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {}),
+      floatingActionButton: FloatingActionButton.extended(
+        elevation: 0,
+        backgroundColor: const Color.fromARGB(255, 248, 200, 28),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        label: const Padding(
+          padding: EdgeInsets.only(left: 70, right: 70),
+          child: Icon(
+            Icons.remove,
+            size: 40,
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
