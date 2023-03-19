@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hain/pages/category_page/catpagetop.dart';
-import 'package:hain/selectionaddmin.dart';
+import 'package:hain/util/selectionaddmin.dart';
 
 class CategoryPage extends StatelessWidget {
   final String catName;

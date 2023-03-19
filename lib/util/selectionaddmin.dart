@@ -11,17 +11,25 @@ class SelectionMiddle extends StatelessWidget {
         width: double.infinity,
         height: 48,
         decoration: const BoxDecoration(color: Colors.amberAccent),
-        child: const Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text("Minus"),
-            VerticalDivider(
+            TextButton(
+                onPressed: () {
+                  print("Minus Click");
+                },
+                child: const Text("Minus")),
+            const VerticalDivider(
               thickness: 2,
               indent: 8,
               endIndent: 8,
               color: Colors.black45,
             ),
-            Text("Added"),
+            TextButton(
+                onPressed: () {
+                  print("Added Click");
+                },
+                child: const Text("Added")),
           ],
         ),
       ),

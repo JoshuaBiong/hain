@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hain/cattile.dart';
+import 'package:hain/util/cattile.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
