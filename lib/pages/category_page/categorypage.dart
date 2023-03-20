@@ -28,11 +28,6 @@ class CategoryPage extends StatelessWidget {
             height: 70,
             decoration: BoxDecoration(color: Colors.amberAccent.shade400),
           ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text("BAck")),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(

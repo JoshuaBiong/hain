@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:hain/util/cattile.dart';
 
@@ -65,9 +63,11 @@ class Homepage extends StatelessWidget {
               actions: [
                 Center(
                   child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text("SAVE"),
-                    style: const ButtonStyle(),
+                    onPressed: () {
+                      Navigator.pop(context);
+                      // print("DB click");
+                    },
+                    child: const Text("SAVE"),
                   ),
                 )
               ],
