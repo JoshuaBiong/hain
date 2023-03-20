@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:hain/util/cattile.dart';
 
@@ -9,6 +11,8 @@ class Homepage extends StatelessWidget {
 
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
 
+//-----------------DIALOG BOX
+
   Future<void> showInformationDialog(BuildContext context) async {
     return await showDialog(
         context: context,
@@ -17,33 +21,56 @@ class Homepage extends StatelessWidget {
               TextEditingController();
           return StatefulBuilder(builder: (context, setState) {
             return AlertDialog(
-              content: Form(
-                key: _formkey,
-                child: Column(
-                  children: [
-                    TextField(
-                      controller: texteditorController,
-                      decoration: const InputDecoration(
-                        label: Text("amount"),
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              style: BorderStyle.solid, color: Colors.black38),
+              content: SizedBox(
+                height: 140,
+                child: Form(
+                  key: _formkey,
+                  child: Column(
+                    children: [
+                      TextField(
+                        controller: texteditorController,
+                        decoration: const InputDecoration(
+                          // hintMaxLines: 1,
+                          label: Text("amount",
+                              style: TextStyle(color: Colors.black38)),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.black)),
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                style: BorderStyle.solid,
+                                color: Colors.black45),
+                          ),
                         ),
                       ),
-                    ),
-                    TextField(
-                      controller: texteditorController,
-                      decoration: const InputDecoration(
-                        label: Text("amount"),
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              style: BorderStyle.solid, color: Colors.black38),
+                      const SizedBox(height: 20),
+                      TextField(
+                        controller: texteditorController,
+                        decoration: const InputDecoration(
+                          // hintMaxLines: 1,
+                          label: Text("Discription",
+                              style: TextStyle(color: Colors.black38)),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.black)),
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                style: BorderStyle.solid,
+                                color: Colors.black45),
+                          ),
                         ),
                       ),
-                    )
-                  ],
+                    ],
+                  ),
                 ),
               ),
+              actions: [
+                Center(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text("SAVE"),
+                    style: const ButtonStyle(),
+                  ),
+                )
+              ],
             );
           });
         });
