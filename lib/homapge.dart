@@ -10,7 +10,6 @@ class Homepage extends StatelessWidget {
   });
 
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-
 //-----------------DIALOG BOX
 
   Future<void> showInformationDialog(BuildContext context) async {
@@ -42,6 +41,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                       ),
+                      
                       const SizedBox(height: 20),
                       TextField(
                         controller: texteditorController,

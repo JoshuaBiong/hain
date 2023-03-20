@@ -4,13 +4,18 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Have you ever wondered where all your money goes each month?
 
-A few resources to get you started if this is your first Flutter project:
+Hain is a budget app that can help you track your expenses and find areas where you can cut back. With Hain, you can:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Keep track of your spending
+- Find ways to save money
+- Stay on top of your finances
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Do you find it difficult to keep track of your expenses?
+
+Do you often find yourself overspending or underspending on your budget? Hain is a budget tracking app that can help you stay on top of your finances. With Hain, you can:
+
+-Track your expenses and income
+-Set budget goals
+-Get insights into your spending habits
