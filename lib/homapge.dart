@@ -18,14 +18,32 @@ class Homepage extends StatelessWidget {
           return StatefulBuilder(builder: (context, setState) {
             return AlertDialog(
               content: Form(
-                  key: _formkey,
-                  child: Column(
-                    children: [
-                      TextField(
-                        controller: texteditorController,
-                      )
-                    ],
-                  )),
+                key: _formkey,
+                child: Column(
+                  children: [
+                    TextField(
+                      controller: texteditorController,
+                      decoration: const InputDecoration(
+                        label: Text("amount"),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              style: BorderStyle.solid, color: Colors.black38),
+                        ),
+                      ),
+                    ),
+                    TextField(
+                      controller: texteditorController,
+                      decoration: const InputDecoration(
+                        label: Text("amount"),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              style: BorderStyle.solid, color: Colors.black38),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             );
           });
         });
@@ -51,9 +69,6 @@ class Homepage extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 248, 200, 28),
         onPressed: () async {
           await showInformationDialog(context);
-          // dialogAccess;
-
-          print("clicked");
         },
         label: const Text("       +       "),
       ),
