@@ -17,6 +17,7 @@ class SelectionMiddle extends StatelessWidget {
             TextButton(
                 onPressed: () {
                   print("Minus Click");
+                  Navigator.pop(context);
                 },
                 child: const Text("Minus")),
             const VerticalDivider(

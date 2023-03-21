@@ -3,6 +3,7 @@ import 'package:hain/pages/category_page/catpagetop.dart';
 import 'package:hain/util/selectionaddmin.dart';
 
 import '../../util/dialog.dart';
+import 'cat_page_tile.dart';
 
 class CategoryPage extends StatelessWidget {
   final String catName;
@@ -25,27 +26,41 @@ class CategoryPage extends StatelessWidget {
         });
   }
 
+  final List<Object> catTile = <Object>[
+    ["School", "data", 4300],
+    ["School", "data", 4300],
+    ["School", "data", 4300],
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          Text(
-            catName,
-            style: const TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.w700,
-                color: Colors.black54),
-            textAlign: TextAlign.center,
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.arrow_back_ios),
+              ),
+              Expanded(
+                flex: 1,
+                child: Text(
+                  catName,
+                  style: const TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black54),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ],
           ),
           CategoryPTop(
             amountFromTop: amount,
           ),
           const SelectionMiddle(),
-          Container(
-            height: 70,
-            decoration: BoxDecoration(color: Colors.amberAccent.shade400),
-          ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
