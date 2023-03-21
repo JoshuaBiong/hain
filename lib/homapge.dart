@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hain/util/cattile.dart';
+import 'package:hain/util/dialog.dart';
 
 class Homepage extends StatelessWidget {
   // final void Function()? dialogAccess;
@@ -17,60 +18,8 @@ class Homepage extends StatelessWidget {
           final TextEditingController texteditorController =
               TextEditingController();
           return StatefulBuilder(builder: (context, setState) {
-            return AlertDialog(
-              content: SizedBox(
-                height: 140,
-                child: Form(
-                  key: _formkey,
-                  child: Column(
-                    children: [
-                      TextField(
-                        controller: texteditorController,
-                        decoration: const InputDecoration(
-                          // hintMaxLines: 1,
-                          label: Text("amount",
-                              style: TextStyle(color: Colors.black38)),
-                          focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.black)),
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                style: BorderStyle.solid,
-                                color: Colors.black45),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      TextField(
-                        controller: texteditorController,
-                        decoration: const InputDecoration(
-                          // hintMaxLines: 1,
-                          label: Text("Discription",
-                              style: TextStyle(color: Colors.black38)),
-                          focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.black)),
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                style: BorderStyle.solid,
-                                color: Colors.black45),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              actions: [
-                Center(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                      // print("DB click");
-                    },
-                    child: const Text("SAVE"),
-                  ),
-                )
-              ],
-            );
+            return Dialogbox(
+                formkey: _formkey, textEditorController: texteditorController);
           });
         });
   }
