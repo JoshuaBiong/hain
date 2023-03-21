@@ -10,7 +10,7 @@ class CategoryPTop extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 4),
       child: Container(
         height: 170,
-        width: 330,
+        width: double.infinity,
         decoration: BoxDecoration(
           color: Colors.yellow,
           borderRadius: BorderRadius.circular(11),
