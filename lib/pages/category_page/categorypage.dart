@@ -26,11 +26,12 @@ class CategoryPage extends StatelessWidget {
         });
   }
 
-  final List<Object> catTile = <Object>[
-    ["School", "data", 4300],
-    ["School", "data", 4300],
-    ["School", "data", 4300],
-  ];
+  final Map<String, dynamic> categoryTiles = {
+    'CategoryName': "HOME",
+    'Amount': 32,
+  };
+
+  // Map catPagetile = new Map();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
